@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Server",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Iinclude",
+                "src/main.cpp",
+                "src/Server.cpp",
+                "-lws2_32",
+                "-mconsole",
+                "-o",
+                "server.exe"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Run Server",
+            "type": "shell",
+            "command": "cmd",
+            "args": ["/c", "start", "cmd", "/k", "server.exe"],
+            "dependsOn": "Build Server",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Client",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Iinclude",
+                "client.cpp",
+                "-lws2_32",
+                "-mconsole",
+                "-o",
+                "client.exe"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Run Client",
+            "type": "shell",
+            "command": "cmd",
+            "args": ["/c", "start", "cmd", "/k", "client.exe"],
+            "dependsOn": "Build Client",
+            "problemMatcher": []
+        }
+    ]
+}
