@@ -2,12 +2,19 @@
 A multi-threaded, client-server chat system built from scratch in C++ using TCP/IP sockets. It's designed to handle multiple concurrent users for real-time messaging, showcasing fundamental low-level network programming and concurrency concepts.
 ### Features
 Multi-Threaded Server: Utilizes a thread-per-client model to handle multiple concurrent users in parallel.
+
 Real-time Messaging: Supports both public broadcast messages and private one-to-one messages.
+
 User Nicknames: Allows users to set and change their nicknames with the /nick command.
+
 Online User List: Users can request a list of all currently connected clients with the /list command.
+
 Graceful Shutdown: The server can be shut down cleanly using a SHUTDOWN command in its console, notifying all clients.
+
 External Configuration: The server port is configured via an external server.conf file, so no recompilation is needed to change it.
+
 Asynchronous Client: The client uses select() to handle both user input and network messages simultaneously, ensuring notifications are never missed.
+
 Object-Oriented Design: The server code is refactored into a clean, encapsulated Server class.
 
 ## Building the Project
