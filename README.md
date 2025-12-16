@@ -21,11 +21,13 @@ You will need at least two separate terminal windows.
 Start the Server: In your first terminal, run the server executable:
 
 ./server.exe
+
 The server will start and listen on the port specified in server.conf (default is 8080).
 
 Start the Client(s): In one or more other terminals, run the client executable:
 
 ./client.exe
+
 The client will connect to the server. You can now start chatting!
 
 Server Administration:
@@ -38,8 +40,13 @@ To shut down the server gracefully, type /shutdown in the server's terminal wind
 Once connected, you can type messages to send them publicly. The following special commands are available:
 
 /nick <new_name> - Changes your nickname.
+
 Example: /nick Alice
+
 /msg <username> <message> - Sends a private message to a specific user.
+
 Example: /msg Bob Hello there!
+
 /list - Shows a list of all users currently online.
+
 /exit - Disconnects you from the server.
